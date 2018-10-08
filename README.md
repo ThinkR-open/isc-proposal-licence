@@ -1,6 +1,6 @@
 # isc-proposal-licence
 
-## This is the repo for ISC proposal, "Rebooting and Extending R for Neo4J" 
+## This is the repo for ISC proposal, "Licensing R Package - Guidelines and tools" 
 
 ## See the proposal 
 
