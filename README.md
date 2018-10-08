@@ -12,6 +12,8 @@ You can help us on this proposal through several ways :
 
 + Proof reading the proposal 
 
++ Adding [licence related resources](https://github.com/ThinkR-open/isc-proposal-licence/issues/1)
+
 + Sharing this proposal to the world ;) 
 
 If ever you have any other idea to help us on this project, feel free to reach out to us: send an email at colin@thinkr.fr, or [open an issue](https://github.com/ThinkR-open/isc-proposal-licence/issues/new), or tweet us at : https://twitter.com/_ColinFay 
