@@ -201,15 +201,16 @@ package. The idea is to answer these questions:
   - Is my license choice compatible with R in general?
   - Can I include this dataset in my package?
   - Can I include this program in my package?
+  - What conditions does my license place on people who wish to use or depend on my package?
 
 ## The Team
 
 The research will be made by:
 
   - [Colin Fay](https://colinfay.me/) - Data Scientist, R Hacker &
-    Trainer at ThinkR, Open Source developer, Blogger, Speaker.
-  - [Miles McBain](https://milesmcbain.xyz/) - Visiting Scientist at
-    CSIRO, Statistician & Open Source Developer, and Blogger.
+  Trainer at ThinkR, Open Source developer, Blogger, Speaker.
+  - [Miles McBain](https://milesmcbain.xyz/) - Research Associate at
+    Queensland University of Technology, Statistician & Open Source Developer, and Blogger.
 
 The results will be hosted on GitHub, open to external contributions.
 The repo will have a Code of Conduct, and will be completed with a
@@ -245,7 +246,7 @@ development should take around 6 days (3 days each), so around 42 hours.
 
 We are asking for the support of half of these hours from the
 RConsortium, based on a rate of 100$ / hour. The other part will be
-covered by ThinkR & CSIRO, in their effort to support Open Source
+covered by ThinkR & QUT, in their effort to support Open Source
 Software, by freeing time for us to work on this project.
 
 We would also need a “floating budget” of 4K for external legal opinion
