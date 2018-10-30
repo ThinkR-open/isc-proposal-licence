@@ -143,6 +143,12 @@ This book will be distributed as open source (under a license we will
 choose based on our findings). The idea is to provide a simple but
 comprehensive overview of open source licenses and how to use them in R.
 
+This book will be focused on licensing R-related development, but the
+first part of the book will be more general, hence it could be of
+interest to a broader audiance. In other words, even someone coding in
+another open source language will find relevant information in the first
+part of the book.
+
 Here’s a draft of the general outline of the book (subject to change):
 
 1.  Introduction
@@ -212,7 +218,9 @@ beginner or a confirmed developer.
 
 ### Documentation
 
-The documentation part will be a big part of the project.
+The documentation part will be a big part of the project. We have
+started to gather resources on [the GitHub
+repo](https://github.com/ThinkR-open/isc-proposal-licence/issues/1).
 
 > Estimated time: 3 to 4 months
 
@@ -224,20 +232,18 @@ The documentation part will be a big part of the project.
 
 > Estimated time: 1 months
 
-### Communicating
-
-A big part of the success of the project will be communication. We hope
-that the community will grasp this opportunity to contribute and help,
-either by providing inputs or feedback.
-
 ## How Can The ISC Help
 
 We are asking for a grant to support the working days spent to
 investigate, gather information, to develop these tools and guidelines,
-and to promote them. We are asking for the support of a part of these
-days from the RConsortium. The other part will be covered by ThinkR &
-CSIRO, in their effort to support Open Source Software, by freeing time
-for us to work on this project.
+and to promote them. We estimate the documentation and writing to take
+at least 30 days (15 days each), so around 210 hours. The package
+development should take around 6 days (3 days each), so around 42 hours.
+
+We are asking for the support of half of these hours from the
+RConsortium, based on a rate of 100$ / hour. The other part will be
+covered by ThinkR & CSIRO, in their effort to support Open Source
+Software, by freeing time for us to work on this project.
 
 We would also need a “floating budget” of 4K for external legal opinion
 (to be used or not), and of 1K for documentation. These two budgets will
@@ -248,17 +254,27 @@ Below is a summary of our needs:
 
 |          What | How long | How much |
 | ------------: | -------: | -------: |
-| Documentation | 4 months |       5K |
-|    Guidelines | 4 months |       5K |
-|       Tooling |  1 month |       2K |
-|      Floating |        — |       5K |
+| Documentation | 4 months |     5250 |
+|    Guidelines | 4 months |     5250 |
+|       Tooling |  1 month |     2100 |
+|      Floating |        — |     5000 |
 
 ### Total:
 
-  - Fixed: 12K, to be shared between ThinkR & CSIRO.
-  - Floating: 5K, to be used in case of need.
+  - Fixed: 12600, to be shared between ThinkR & CSIRO.
+  - Floating: 5000, to be used in case of need.
 
 ## Dissemination
+
+### Communicating
+
+A big part of the success of the project will be communication. We hope
+that the community will grasp this opportunity to contribute and help,
+either by providing inputs or feedback.
+
+We hope this book will be of interest to a broad audience, that is to
+say to people not developping in R but looking for information about
+open source licensing.
 
 We will publicise our work through several channels:
 
