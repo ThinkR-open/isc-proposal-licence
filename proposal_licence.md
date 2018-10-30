@@ -7,8 +7,8 @@ Colin FAY & Miles McBain
 
 Licensing is a vital part of Open Source. It provides guidelines for
 interacting with a program, and for making code accessible and reusable
-(or not). It provides a way to make your code open source, in a way you
-want to share it, protecting how your code will be used and reused.
+(or not). It provides a way to make code open source, in a way one wants
+to share it, protecting how it will be used and reused.
 
 Though, licensing is a complex field: there are a lot of available
 licences, and the choice is influenced by how you import and interact
@@ -28,32 +28,37 @@ As [stated in Miles McBain
 proposal](https://github.com/ropensci/unconf17/issues/32) for a unconf
 workshop around this topic, a number of developers use licence without a
 deep knowledge of what these licences precisely imply. And even if, a
-lot of other questions can arise:
+lot of other questions can arise. For example:
 
   - How do the dependencies to a package impact the choices when it
-    comes to Licensing ?  
+    comes to Licensing?  
   - Can we use any license we want in an R package?
-  - Can we use any license we want in R in general? R is *“is
+  - Can we use any license we want with R in general? R is *“is
     distributed under the terms of the GNU General Public License,
     either Version 2, June 1991 or Version 3, June 2007”*. How does this
     impact the code one is writing?
   - Do `depends`/`suggests` have the same impact on license choice?
-  - What are one rights when one is contributing to a package?
+  - How can we include and license a dataset in a package?
+  - What are one rights when contributing to a package?
   - What are the obligation of a package maintainer when it comes to
     changing the license of a package?
-  - What do each licence really imply when using a package?  
+  - What does each licence really imply when using a package?  
   - How does a dependency license influence the licensing of a package?
   - What should be done if a package depends on two non-compatible open
     source licenses?
-  - Are there global vs local states of open sources licenses?
-  - How do license impact the writing of books/articles?
-
-…
+  - Are there global vs local states of open sources licenses (country
+    specific)? Can country-specific licenses be used in another country?
+    See for example the [CeCILL
+    license](http://www.cecill.info/index.fr.html), used by [18 packages
+    on the
+    CRAN](https://github.com/ThinkR-open/isc-proposal-licence/issues/2).
+  - How do license impact the writing of
+    books/articles/blogposts/instructional materials?
 
 ### Licensing and R
 
 A quick dive into the CRAN package database can give us an overview of
-how complex licensing and of how the community is making a lot of
+how complex licensing is and of how the community is making a lot of
 different choices.
 
 ``` r
@@ -61,7 +66,7 @@ different choices.
 Sys.Date()
 ```
 
-    ## [1] "2018-10-08"
+    ## [1] "2018-10-30"
 
 ``` r
 db <- tools::CRAN_package_db()
@@ -88,6 +93,15 @@ length( unique( grep("GPL", db$License, value = TRUE) ) )
 
     ## [1] 83
 
+And some are used just once:
+
+``` r
+# How may licenses are used just once?
+sum( table(db$License) == 1 )
+```
+
+    ## [1] 56
+
 ## The plan
 
 ### Licensing: documentation & consulting
@@ -113,20 +127,45 @@ This book will be distributed open source (under a license we will
 choose based on our finding). The idea is to provide a simple but
 comprehensive overview of open source licenses and how to use them in R.
 
+Here’s a draft of the general outline of the book (subject to change):
+
+1.  Introduction
+2.  General Overview of Open Source licenses
+3.  Licensing R Code: packages
+
+<!-- end list -->
+
+  - Dependencies
+  - Datasets
+
+<!-- end list -->
+
+4.  Licensing R Code : publication
+
+<!-- end list -->
+
+  - Publishing book
+  - Blogging about R
+  - Teaching materials & conferences
+
+<!-- end list -->
+
+5.  Conclusion
+
 ### Licensing: tools
 
-#### Pkg & App
+#### Package
 
-The last step will be the development of a shiny app and a package that
-will be able to give guidelines about the possibility of licensing for a
-project.
+The last step will be the development of a package that will be able to
+give guidelines about the possibility of licensing for a package.
 
-The idea is to provide several features, included (but not limited to):
+This package will allow a developper to parse the skeleton of another
+package, and to get a quick report about licensing of this specific
+package. The idea is to answer these questions:
 
-  - Giving the licenses one can use based on a package one want to use
-    as a dependency
-  - Parse a DESCRIPTION file to detect any licensing issue
-  - Parse a package tar.gz to detect any licensing issue
+  - Is my license choice compatible with the dependencies I’ve chosen?
+  - Is my license choice compatible with R in general?
+  - Can I include this dataset in my package?
 
 ## The Team
 
@@ -134,12 +173,6 @@ The research will be made by:
 
   - Colin Fay - ThinkR
   - Miles McBain - CSIRO
-
-> About ThinkR: ThinkR is a french-based company that works with
-> everything R and data science related. We focus on software
-> engineering, package development and training.
-
-> About CSIRO
 
 The results will be hosted on GitHub, opened to external contributions.
 The repo will have a Code of Conduct, and will be completed with a
@@ -154,37 +187,47 @@ The documentation part will be a big part of the project.
 
 > Estimated time: 3 to 4 months
 
-### guidelines
+### Guidelines & Writing
 
 > Estimated time: 3 to 4 months
 
 ### Tooling
 
-> Estimated time: 1 to 2 months
+> Estimated time: 1 months
 
 ### Communicating
 
 A big part of the success of the project will be communication. We hope
 that the community will grasp this opportunity to contribute and help,
-either by providing inputs or feedback
+either by providing inputs or feedback.
 
 ## How Can The ISC Help
 
 We are asking for a grant to support the working time spent to
 investigate, gather information, to develop these tools and guidelines,
-and to promote them. We plan on spending around ??? days a month on
-these tools ( ??? days each). We are asking for the support of half of
-these days from the RConsortium ( ??? ). The other half will be covered
-by ThinkR & CSIRO, in its effort to support Open Source Software, by
-freeing time for us to work on this project.
+and to promote them. We are asking for the support of a part of these
+days from the RConsortium. The other part will be covered by ThinkR &
+CSIRO, in their effort to support Open Source Software, by freeing time
+for us to work on this project.
+
+We would also need a “floating budget” of 4K for external legal opinion
+(to be used or not), and of 1K for documentation. These two budgets will
+allow us to buy documentation if we need to, and to get advices from an
+expert in case of need.
 
 Below is a summary of our needs:
 
 |          What | How long | How much |
 | ------------: | -------: | -------: |
-| Documentation | 4 months |      ??? |
-|    Guidelines | 4 months |      ??? |
-|       Tooling |  1 month |      ??? |
+| Documentation | 4 months |       5K |
+|    Guidelines | 4 months |       5K |
+|       Tooling |  1 month |       2K |
+|      Floating |        — |       5K |
+
+### Total:
+
+  - Fixed: 12K, to be splitted between ThinkR & CSIRO.
+  - Floating: 5K, to be used in case of need.
 
 ## Dissemination
 
@@ -193,5 +236,3 @@ We will publicise our work through several channels:
   - Blogposts on R related blogs (on ThinkR and others)
   - Article proposals on R and software engineering journals (R Journal,
     Journal of Statistical Software, …)
-
-## Footnotes
