@@ -10,7 +10,7 @@ interacting with a program, and for making code accessible and reusable
 (or not). It provides a way to make code open source, in a way one wants
 to share it, protecting how it will be used and reused.
 
-Though, licensing is a complex field: there are a lot of available
+Licensing is also challenging and complex: there are a lot of available
 licences, and the choice is influenced by how you import and interact
 with codes from other packages and/or programs.
 
@@ -27,10 +27,10 @@ potentially incompatible interaction. For example:
 St. Laurent*
 
 As [stated in Miles McBain
-proposal](https://github.com/ropensci/unconf17/issues/32) for a unconf
-workshop around this topic, a number of developers use licence without a
+proposal](https://github.com/ropensci/unconf17/issues/32) for an unconf
+project around this topic, a number of developers use licence without a
 clear knowledge of what these licences precisely imply. When one wants
-to chose a licence, a lot of questions can arise. For example:
+to choose a licence, a lot of questions can arise. For example:
 
   - How do the dependencies to a package impact the choices when it
     comes to Licensing?  
@@ -39,7 +39,7 @@ to chose a licence, a lot of questions can arise. For example:
     distributed under the terms of the GNU General Public License,
     either Version 2, June 1991 or Version 3, June 2007”*. How does this
     impact the code one is writing?
-  - Do `depends`/`suggests` have the same impact on license choice?
+  - Do `Depends`/`Suggests` have the same impact on license choice?
   - How can we include and license a data set in a package?
   - What are one rights when contributing to a package?
   - What are the obligation of a package maintainer when it comes to
@@ -55,8 +55,8 @@ to chose a licence, a lot of questions can arise. For example:
     license](http://www.cecill.info/index.fr.html), used by [18 packages
     on the
     CRAN](https://github.com/ThinkR-open/isc-proposal-licence/issues/2).
-  - How do license impact the writing of books/articles/blog
-    posts/instructional materials?
+  - How do license impact the writing and publication of
+    books/articles/blog posts/instructional materials?
 
 ### Licensing and R
 
@@ -114,9 +114,9 @@ From these two numbers, two question arise:
     license, what makes these packages so special/different from the
     others so that they need such a rarely used license?
 
-One guess could be that developers chose a license without a deep
+One guess could be that developers choose a license without a deep
 knowledge about this license, leading to a choice which might not be the
-perfect one.
+optimal one.
 
 ## The plan
 
@@ -128,16 +128,16 @@ incompatibly elements inside these licenses.
 
 This first steps will include:
 
-  - gathering information from current state of open source
+  - gathering information from current state of open source licenses.
   - (if needed) consulting one/several lawyers specialized in open
     source to gather advice about our findings.
 
 ### Licensing: guidelines
 
-#### Bookdown
+#### Online book
 
-Once the first step is completed, we plan to write a bookdown containing
-all the results from our findings.
+Once the first step is completed, we plan to write an online book
+(written with bookdown) containing all the results from our findings.
 
 This book will be distributed as open source (under a license we will
 choose based on our findings). The idea is to provide a simple but
@@ -206,20 +206,23 @@ package. The idea is to answer these questions:
 
 The research will be made by:
 
-  - Colin Fay - ThinkR
-  - Miles McBain - CSIRO
+  - [Colin Fay](https://colinfay.me/) - Data Scientist, R Hacker &
+    Trainer at ThinkR, Open Source developer, Blogger, Speaker.
+  - [Miles McBain](https://milesmcbain.xyz/) - Visiting Scientist at
+    CSIRO, Statistician & Open Source Developer, and Blogger.
 
-The results will be hosted on GitHub, opened to external contributions.
+The results will be hosted on GitHub, open to external contributions.
 The repo will have a Code of Conduct, and will be completed with a
 contribution guide. Every contribution will be welcome, be it from a
-beginner or a confirmed developer.
+beginner or a more experienced developer.
 
-## Milestone
+## Milestones
 
 ### Documentation
 
-The documentation part will be a big part of the project. We have
-started to gather resources on [the GitHub
+The first step of the project will be to read and gather as much
+information as needed around open source licensing. We have started to
+gather resources on [the GitHub
 repo](https://github.com/ThinkR-open/isc-proposal-licence/issues/1).
 
 > Estimated time: 3 to 4 months
@@ -261,7 +264,7 @@ Below is a summary of our needs:
 
 ### Total:
 
-  - Fixed: 12600, to be shared between ThinkR & CSIRO.
+  - Fixed: 12600, to be shared between Colin Fay & Miles McBain.
   - Floating: 5000, to be used in case of need.
 
 ## Dissemination
@@ -281,4 +284,5 @@ We will publicise our work through several channels:
   - Blogposts on R related blogs (on ThinkR and others)
   - Article proposals on R and software engineering journals (R Journal,
     Journal of Statistical Software, …)
-  - Talks at meetups and conference presenting our findings.
+  - Talks at meetups and conference presenting our findings (in
+    particular useR).
