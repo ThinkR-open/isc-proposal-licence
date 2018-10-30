@@ -1,7 +1,7 @@
-Licensing R Package - Guidelines and tools
+Licensing R - Guidelines and tools
 ================
 Colin FAY & Miles McBain
-2018-03-30
+2018-10-30
 
 ## The Challenge
 
@@ -12,8 +12,10 @@ to share it, protecting how it will be used and reused.
 
 Though, licensing is a complex field: there are a lot of available
 licences, and the choice is influenced by how you import and interact
-with codes from other packages. It’s even harder when it comes to
-combining licenses. For example:
+with codes from other packages and/or programs.
+
+It’s even harder when it comes to combining licenses, as it can lead to
+potentially incompatible interaction. For example:
 
 > “By combining GPL-licensed code with code under any but the most
 > unrestrictive licenses, the creator of the putative”new program" is
@@ -27,8 +29,8 @@ St. Laurent*
 As [stated in Miles McBain
 proposal](https://github.com/ropensci/unconf17/issues/32) for a unconf
 workshop around this topic, a number of developers use licence without a
-deep knowledge of what these licences precisely imply. And even if, a
-lot of other questions can arise. For example:
+clear knowledge of what these licences precisely imply. When one wants
+to chose a licence, a lot of questions can arise. For example:
 
   - How do the dependencies to a package impact the choices when it
     comes to Licensing?  
@@ -38,10 +40,11 @@ lot of other questions can arise. For example:
     either Version 2, June 1991 or Version 3, June 2007”*. How does this
     impact the code one is writing?
   - Do `depends`/`suggests` have the same impact on license choice?
-  - How can we include and license a dataset in a package?
+  - How can we include and license a data set in a package?
   - What are one rights when contributing to a package?
   - What are the obligation of a package maintainer when it comes to
-    changing the license of a package?
+    changing the license of a package? Can one change the license at any
+    time?
   - What does each licence really imply when using a package?  
   - How does a dependency license influence the licensing of a package?
   - What should be done if a package depends on two non-compatible open
@@ -52,8 +55,8 @@ lot of other questions can arise. For example:
     license](http://www.cecill.info/index.fr.html), used by [18 packages
     on the
     CRAN](https://github.com/ThinkR-open/isc-proposal-licence/issues/2).
-  - How do license impact the writing of
-    books/articles/blogposts/instructional materials?
+  - How do license impact the writing of books/articles/blog
+    posts/instructional materials?
 
 ### Licensing and R
 
@@ -102,6 +105,19 @@ sum( table(db$License) == 1 )
 
     ## [1] 56
 
+From these two numbers, two question arise:
+
+  - Why are there that many different licenses in use? Are there really
+    155 different configurations that require the use of 155 different
+    licenses?
+  - When it comes to the packages that are the only one using a specific
+    license, what makes these packages so special/different from the
+    others so that they need such a rarely used license?
+
+One guess could be that developers chose a license without a deep
+knowledge about this license, leading to a choice which might not be the
+perfect one.
+
 ## The plan
 
 ### Licensing: documentation & consulting
@@ -113,23 +129,33 @@ incompatibly elements inside these licenses.
 This first steps will include:
 
   - gathering information from current state of open source
-  - consulting one/several lawyers specialized in open source to gather
-    advice about our findings.
+  - (if needed) consulting one/several lawyers specialized in open
+    source to gather advice about our findings.
 
 ### Licensing: guidelines
 
 #### Bookdown
 
-Once the first step is completed, we’ll write a bookdown containing all
-the results from this finding.
+Once the first step is completed, we plan to write a bookdown containing
+all the results from our findings.
 
-This book will be distributed open source (under a license we will
-choose based on our finding). The idea is to provide a simple but
+This book will be distributed as open source (under a license we will
+choose based on our findings). The idea is to provide a simple but
 comprehensive overview of open source licenses and how to use them in R.
 
 Here’s a draft of the general outline of the book (subject to change):
 
 1.  Introduction
+
+<!-- end list -->
+
+  - What are open source licenses?
+  - Why are they important?
+  - A short history of open source licenses
+  - Key concepts of open source licensing (copyleft, open source, …)
+
+<!-- end list -->
+
 2.  General Overview of Open Source licenses
 3.  Licensing R Code: packages
 
@@ -137,6 +163,8 @@ Here’s a draft of the general outline of the book (subject to change):
 
   - Dependencies
   - Datasets
+  - Including external code or programs
+  - Contributing to someone’s package
 
 <!-- end list -->
 
@@ -159,13 +187,14 @@ Here’s a draft of the general outline of the book (subject to change):
 The last step will be the development of a package that will be able to
 give guidelines about the possibility of licensing for a package.
 
-This package will allow a developper to parse the skeleton of another
+This package will allow a developer to parse the skeleton of another
 package, and to get a quick report about licensing of this specific
 package. The idea is to answer these questions:
 
   - Is my license choice compatible with the dependencies I’ve chosen?
   - Is my license choice compatible with R in general?
   - Can I include this dataset in my package?
+  - Can I include this program in my package?
 
 ## The Team
 
@@ -203,7 +232,7 @@ either by providing inputs or feedback.
 
 ## How Can The ISC Help
 
-We are asking for a grant to support the working time spent to
+We are asking for a grant to support the working days spent to
 investigate, gather information, to develop these tools and guidelines,
 and to promote them. We are asking for the support of a part of these
 days from the RConsortium. The other part will be covered by ThinkR &
@@ -212,7 +241,7 @@ for us to work on this project.
 
 We would also need a “floating budget” of 4K for external legal opinion
 (to be used or not), and of 1K for documentation. These two budgets will
-allow us to buy documentation if we need to, and to get advices from an
+allow us to buy documentation if we need to, and to get advice from an
 expert in case of need.
 
 Below is a summary of our needs:
@@ -226,7 +255,7 @@ Below is a summary of our needs:
 
 ### Total:
 
-  - Fixed: 12K, to be splitted between ThinkR & CSIRO.
+  - Fixed: 12K, to be shared between ThinkR & CSIRO.
   - Floating: 5K, to be used in case of need.
 
 ## Dissemination
@@ -236,3 +265,4 @@ We will publicise our work through several channels:
   - Blogposts on R related blogs (on ThinkR and others)
   - Article proposals on R and software engineering journals (R Journal,
     Journal of Statistical Software, …)
+  - Talks at meetups and conference presenting our findings.
