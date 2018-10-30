@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 
 Licensing is a vital part of Open Source. It provides guidelines for interacting with a program, and for making code accessible and reusable (or not). It provides a way to make code open source, in a way one wants to share it, protecting how it will be used and reused.
 
-Though, licensing is a complex field: there are a lot of available licences, and the choice is influenced by how you import and interact with codes from other packages and/or programs. 
+Licensing is also challenging and complex: there are a lot of available licences, and the choice is influenced by how you import and interact with codes from other packages and/or programs. 
 
 It's even harder when it comes to combining licenses, as it can lead to potentially incompatible interaction. For example: 
 
@@ -27,12 +27,13 @@ It's even harder when it comes to combining licenses, as it can lead to potentia
 
 _Understanding Open Source and Free Software Licensing, Andrew M. St. Laurent_
 
-As [stated in Miles McBain proposal](https://github.com/ropensci/unconf17/issues/32) for a unconf workshop around this topic, a number of developers use licence without a clear knowledge of what these licences precisely imply. When one wants to chose a licence, a lot of questions can arise. For example: 
+<!-- Not really a workshop proposal? -->
+As [stated in Miles McBain proposal](https://github.com/ropensci/unconf17/issues/32) for a unconf workshop around this topic, a number of developers use licence without a clear knowledge of what these licences precisely imply. When one wants to choose a licence, a lot of questions can arise. For example: 
 
 + How do the dependencies to a package impact the choices when it comes to Licensing?  
 + Can we use any license we want in an R package? 
 + Can we use any license we want with R in general? R is _"is distributed under the terms of the GNU General Public License, either Version 2, June 1991 or Version 3, June 2007"_. How does this impact the code one is writing?
-+ Do `depends`/`suggests` have the same impact on license choice?
++ Do `Depends`/`Suggests` have the same impact on license choice?
 + How can we include and license a data set in a package?
 + What are one rights when contributing to a package? 
 + What are the obligation of a package maintainer when it comes to changing the license of a package? Can one change the license at any time? 
@@ -40,7 +41,7 @@ As [stated in Miles McBain proposal](https://github.com/ropensci/unconf17/issues
 + How does a dependency license influence the licensing of a package? 
 + What should be done if a package depends on two non-compatible open source licenses?
 + Are there global vs local states of open sources licenses (country specific)? Can country-specific licenses be used in another country? See for example the [CeCILL license](http://www.cecill.info/index.fr.html), used by [18 packages on the CRAN](https://github.com/ThinkR-open/isc-proposal-licence/issues/2). 
-+ How do license impact the writing of books/articles/blog posts/instructional materials?
++ How do license impact the writing and publication of books/articles/blog posts/instructional materials?
 
 
 
@@ -82,7 +83,7 @@ From these two numbers, two question arise:
 + Why are there that many different licenses in use? Are there really `r length(unique(db$License))` different configurations that require the use of `r length(unique(db$License))` different licenses?
 + When it comes to the packages that are the only one using a specific license, what makes these packages so special/different from the others so that they need such a rarely used license? 
 
-One guess could be that developers chose a license without a deep knowledge about this license, leading to a choice which might not be the perfect one. 
+One guess could be that developers choose a license without a deep knowledge about this license, leading to a choice which might not be the optimal one. 
 
 ## The plan
 
@@ -92,16 +93,16 @@ The first part of the plan is to gather documentation and notes about current st
 
 This first steps will include: 
 
-+ gathering information from current state of open source
-+ (if needed) consulting one/several lawyers specialized in open source to gather advice about our findings.
++ gathering information from current state of open source <!-- wow tout l'open source?! -->
++ (if needed) consulting one/several lawyers specialized in open source to gather advice about our findings.<!-- wouldn't this potentially change the budget a lot? -->
 
 ### Licensing: guidelines
 
-#### Bookdown
+#### Online book
 
-Once the first step is completed, we plan to write a bookdown containing all the results from our findings. 
+Once the first step is completed, we plan to write a bookdown containing all the results from our findings. <!-- bookdown is an implementation detail, present it as an online book, written in bookdown --> 
 
-This book will be distributed as open source (under a license we will choose based on our findings). The idea is to provide a simple but comprehensive overview of open source licenses and how to use them in R.
+This book will be distributed as open source (under a license we will choose based on our findings<!-- :-D -->). The idea is to provide a simple but comprehensive overview of open source licenses and how to use them in R.
 
 Here's a draft of the general outline of the book (subject to change): 
 
@@ -136,19 +137,19 @@ This package will allow a developer to parse the skeleton of another package, an
 + Can I include this program in my package?
 
 ## The Team
-
+<!-- in my own proposal I added my own R "accreditations", maybe you could do that. You're both developers, bloggers, educators. also add an URL to your online home -->
 The research will be made by: 
 
 + Colin Fay - ThinkR 
 + Miles McBain - CSIRO
 
-The results will be hosted on GitHub, opened to external contributions. The repo will have a Code of Conduct, and will be completed with a contribution guide. Every contribution will be welcome, be it from a beginner or a confirmed developer.
+The results will be hosted on GitHub, open to external contributions. The repo will have a Code of Conduct, and will be completed with a contribution guide. Every contribution will be welcome, be it from a beginner or a more experienced developer.
 
-## Milestone 
+## Milestones 
 
 ### Documentation
 
-The documentation part will be a big part of the project. 
+The documentation part will be a big part of the project. <!-- weird to underline that since the next section is as long -->
 
 > Estimated time: 3 to 4 months
 
@@ -162,13 +163,13 @@ The documentation part will be a big part of the project.
 
 ### Communicating 
 
-A big part of the success of the project will be communication. We hope that the community will grasp this opportunity to contribute and help, either by providing inputs or feedback.
+A big part of the success of the project will be communication. <!-- phrasing already used --> We hope that the community will grasp this opportunity to contribute and help, either by providing inputs or feedback. <!-- communicating HOW? -->
 
 ## How Can The ISC Help
 
 We are asking for a grant to support the working days spent to investigate, gather information, to develop these tools and guidelines, and to promote them. We are asking for the support of a part of these days from the RConsortium. The other part will be covered by ThinkR & CSIRO, in their effort to support Open Source Software, by freeing time for us to work on this project.
 
-We would also need a "floating budget" of 4K for external legal opinion (to be used or not), and of 1K for documentation. These two budgets will allow us to buy documentation if we need to, and to get advice from an expert in case of need.
+We would also need a "floating budget" of 4K for external legal opinion (to be used or not)<!-- aaah ok-->, and of 1K for documentation. These two budgets will allow us to buy documentation if we need to, and to get advice from an expert in case of need.
 
 Below is a summary of our needs: 
 
@@ -181,13 +182,13 @@ Below is a summary of our needs:
 
 ### Total: 
 
-+ Fixed: 12K, to be shared between ThinkR & CSIRO.
++ Fixed: 12K, to be shared between ThinkR & CSIRO.<!-- the fact that you mention institutions here gave the impression they were giving the money. to be shared between C and M via their institutions ThinkR and CSIRO? -->
 + Floating: 5K, to be used in case of need.
 
 ## Dissemination 
 
-We will publicise our work through several channels: 
+We will publicise our work through several channels: <!-- ok I see these are the missing details from the communication section -->
 
 + Blogposts on R related blogs (on ThinkR and others)
 + Article proposals on R and software engineering journals (R Journal, Journal of Statistical Software, ...)
-+ Talks at meetups and conference presenting our findings.
++ Talks at meetups and conference presenting our findings.<!-- in particular useR? -->
