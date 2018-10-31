@@ -1,7 +1,12 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 Licensing R - Guidelines and tools
 ================
 Colin FAY & Miles McBain
-2018-10-30
+2018-10-31
 
 ## The Challenge
 
@@ -11,8 +16,8 @@ interacting with a program, and for making code accessible and reusable
 to share it, protecting how it will be used and reused.
 
 Licensing is also challenging and complex: there are a lot of available
-licences, and the choice is influenced by how you import and interact
-with codes from other packages and/or programs.
+licenses, and the choice is influenced by how you import and interact
+with elements from other packages and/or programs.
 
 It’s even harder when it comes to combining licenses, as it can lead to
 potentially incompatible interaction. For example:
@@ -27,34 +32,36 @@ potentially incompatible interaction. For example:
 St. Laurent*
 
 As [stated in Miles McBain
-proposal](https://github.com/ropensci/unconf17/issues/32) for an unconf
-project around this topic, a number of developers use licence without a
-clear knowledge of what these licences precisely imply. When one wants
-to choose a licence, a lot of questions can arise. For example:
+proposal](https://github.com/ropensci/unconf17/issues/32) (1) for an
+unconf project around this topic, a number of developers use license
+without a clear knowledge of what these licenses precisely imply. When
+one wants to choose a license, a lot of questions can arise. For
+example:
 
-  - How do the dependencies to a package impact the choices when it
-    comes to Licensing?  
+  - How do the dependencies to a package impact the choices of a
+    license?
   - Can we use any license we want in an R package?
   - Can we use any license we want with R in general? R is *“is
     distributed under the terms of the GNU General Public License,
-    either Version 2, June 1991 or Version 3, June 2007”*. How does this
-    impact the code one is writing?
+    either Version 2, June 1991 or Version 3, June 2007”*(2). How does
+    this impact the code one is writing?
   - Do `Depends`/`Suggests` have the same impact on license choice?
   - How can we include and license a data set in a package?
   - What are one rights when contributing to a package?
   - What are the obligation of a package maintainer when it comes to
     changing the license of a package? Can one change the license at any
     time?
-  - What does each licence really imply when using a package?  
+  - What does each license really imply when using a package?
   - How does a dependency license influence the licensing of a package?
   - What should be done if a package depends on two non-compatible open
     source licenses?
-  - Are there global vs local states of open sources licenses (country
-    specific)? Can country-specific licenses be used in another country?
-    See for example the [CeCILL
-    license](http://www.cecill.info/index.fr.html), used by [18 packages
-    on the
-    CRAN](https://github.com/ThinkR-open/isc-proposal-licence/issues/2).
+  - Are there global vs local states of open sources licenses
+    (country-specific)? Can country-specific licenses be used in another
+    country? See for example the [CeCILL
+    license](http://www.cecill.info/index.fr.html) (3), used by [18
+    packages on the
+    CRAN](https://github.com/ThinkR-open/isc-proposal-licence/issues/2)
+    (4).
   - How do license impact the writing and publication of
     books/articles/blog posts/instructional materials?
 
@@ -69,28 +76,28 @@ different choices.
 Sys.Date()
 ```
 
-    ## [1] "2018-10-30"
+    ## [1] "2018-10-31"
 
 ``` r
 db <- tools::CRAN_package_db()
 ```
 
-Let’s ask us a simple question: how many licences are currently used on
+Let’s ask us a simple question: how many licenses are currently used on
 the CRAN?
 
 ``` r
-# How many different licences? 
-length(unique(db$License))
+# How many different licenses? 
+length( unique( db$License ) )
 ```
 
     ## [1] 155
 
-Inside this list, various licences: GPL, Apache, LGPL, AGPL, CC0, MIT…
+Inside this list, various licenses: GPL, Apache, LGPL, AGPL, CC0, MIT…
 
 A lot appears to be a variation of the GPL license:
 
 ``` r
-# How many GPL based licences ? 
+# How many GPL based licenses ? 
 length( unique( grep("GPL", db$License, value = TRUE) ) )
 ```
 
@@ -100,12 +107,12 @@ And some are used just once:
 
 ``` r
 # How may licenses are used just once?
-sum( table(db$License) == 1 )
+sum( table( db$License ) == 1 )
 ```
 
     ## [1] 56
 
-From these two numbers, two question arise:
+From these two numbers, two questions arise:
 
   - Why are there that many different licenses in use? Are there really
     155 different configurations that require the use of 155 different
@@ -123,13 +130,13 @@ optimal one.
 ### Licensing: documentation & consulting
 
 The first part of the plan is to gather documentation and notes about
-current state of open source licences, and to decipher compatibility and
+current state of open source licenses, and to decipher compatibility and
 incompatibly elements inside these licenses.
 
 This first steps will include:
 
   - gathering information from current state of open source licenses.
-  - (if needed) consulting one/several lawyers specialized in open
+  - (if needed) consulting one/several lawyer(s) specialized in open
     source to gather advice about our findings.
 
 ### Licensing: guidelines
@@ -145,7 +152,7 @@ comprehensive overview of open source licenses and how to use them in R.
 
 This book will be focused on licensing R-related development, but the
 first part of the book will be more general, hence it could be of
-interest to a broader audiance. In other words, even someone coding in
+interest to a broader audience. In other words, even someone coding in
 another open source language will find relevant information in the first
 part of the book.
 
@@ -163,6 +170,18 @@ Here’s a draft of the general outline of the book (subject to change):
 <!-- end list -->
 
 2.  General Overview of Open Source licenses
+
+<!-- end list -->
+
+  - Standard and widely-used open source licenses
+  - International & Country Specific licenses
+  - Purpose-specific licenses
+  - Non-reusable licenses
+  - Uncategoized
+  - (inspired by <https://opensource.org/licenses/category>)
+
+<!-- end list -->
+
 3.  Licensing R Code: packages
 
 <!-- end list -->
@@ -201,19 +220,21 @@ package. The idea is to answer these questions:
   - Is my license choice compatible with R in general?
   - Can I include this dataset in my package?
   - Can I include this program in my package?
-  - What conditions does my license place on people who wish to use or depend on my package?
+  - What conditions does my license place on people who wish to use or
+    depend on my package?
 
 ## The Team
 
 The research will be made by:
 
-  - [Colin Fay](https://colinfay.me/) - Data Scientist, R Hacker &
-  Trainer at ThinkR, Open Source developer, Blogger, Speaker.
-  - [Miles McBain](https://milesmcbain.xyz/) - Research Associate at
-    Queensland University of Technology, Statistician & Open Source Developer, and Blogger.
+  - [Colin Fay](https://colinfay.me/) (5) - Data Scientist, R Hacker &
+    Trainer at ThinkR, Open Source developer, Blogger, Speaker.
+  - [Miles McBain](https://milesmcbain.xyz/) (6) - Research Associate at
+    Queensland University of Technology (QUT), Statistician & Open
+    Source Developer, and Blogger.
 
 The results will be hosted on GitHub, open to external contributions.
-The repo will have a Code of Conduct, and will be completed with a
+The repository will have a Code of Conduct, and will be completed with a
 contribution guide. Every contribution will be welcome, be it from a
 beginner or a more experienced developer.
 
@@ -224,7 +245,8 @@ beginner or a more experienced developer.
 The first step of the project will be to read and gather as much
 information as needed around open source licensing. We have started to
 gather resources on [the GitHub
-repo](https://github.com/ThinkR-open/isc-proposal-licence/issues/1).
+repository](https://github.com/ThinkR-open/isc-proposal-licence/issues/1)
+(7).
 
 > Estimated time: 3 to 4 months
 
@@ -239,7 +261,7 @@ repo](https://github.com/ThinkR-open/isc-proposal-licence/issues/1).
 ## How Can The ISC Help
 
 We are asking for a grant to support the working days spent to
-investigate, gather information, to develop these tools and guidelines,
+investigate, gather information, to develop the tools and guidelines,
 and to promote them. We estimate the documentation and writing to take
 at least 30 days (15 days each), so around 210 hours. The package
 development should take around 6 days (3 days each), so around 42 hours.
@@ -250,9 +272,9 @@ covered by ThinkR & QUT, in their effort to support Open Source
 Software, by freeing time for us to work on this project.
 
 We would also need a “floating budget” of 4K for external legal opinion
-(to be used or not), and of 1K for documentation. These two budgets will
-allow us to buy documentation if we need to, and to get advice from an
-expert in case of need.
+(to be used or not), and of 1K for documentation (to be used or not).
+These two budgets will allow us to buy documentation if we need to, and
+to get advice from an expert in case of need.
 
 Below is a summary of our needs:
 
@@ -287,3 +309,13 @@ We will publicise our work through several channels:
     Journal of Statistical Software, …)
   - Talks at meetups and conference presenting our findings (in
     particular useR).
+
+## Footnotes
+
+1)  <https://github.com/ropensci/unconf17/issues/32>
+2)  From `base::license()`
+3)  <http://www.cecill.info/index.fr.html>
+4)  <https://github.com/ThinkR-open/isc-proposal-licence/issues/2>
+5)  <https://colinfay.me/>
+6)  <https://milesmcbain.xyz/>
+7)  <https://github.com/ThinkR-open/isc-proposal-licence/issues/1>
