@@ -1,6 +1,6 @@
 # isc-proposal-licence
 
-## This is the repo for ISC proposal, "Licensing R Package - Guidelines and tools" 
+## This is the repo for ISC proposal, "Licensing R - Guidelines and tools" 
 
 ## See the proposal 
 
